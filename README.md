@@ -4,8 +4,8 @@ Joowon's website
 To do list
 -----------
 
-* Fix the column overlapping on main page in different browsers - working correctly on Firefox & Safari, but not on Chrome and Opera.
-* setup responsive on Mobile(display) environment 
+* Fix the column overlapping on main page on different browsers - working correctly on Firefox & Safari, but not on Chrome & Opera.
+* Setup responsive on Mobile(display) environment 
 
 ---------------
 
