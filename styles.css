@@ -135,9 +135,24 @@ a:hover{
 }
 
 .sections{
-  display: flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+  -ms-flex:auto;
+  -webkit-flex:auto;
+  flex:auto;
+
+  -ms-flex-wrap:wrap;
+  -webkit-flex-wrap:wrap;
+  flex-wrap:wrap;
+
   flex-direction: column;
-  flex-wrap: wrap;
+
+  flex-shrink: 0;
+
   align-items: center;
   align-content: space-around;
 
@@ -148,62 +163,69 @@ a:hover{
   border: 2px solid #000000;
   background-color: #FFFFFF;
   z-index: 0;
-  /* height: 700px; */
+  flex-shrink: 0;
+  flex-flow: column wrap;
+
 
 }
 #sectionLeft{
+
   position: static;
   top: 40px;
   left: 100px;
   width: 400px;
-  /* align-self: center; */
-}
-#sectionLeft:hover .sectionTitle{
-  color: #0000CD;
+
+  flex-shrink: 0;
+  /* overflow-x: auto; */
+
+  /* -webkit-order: 1; */
+
+
 }
 .sectionTitle2:hover a{
   color: #0000CD;
 }
 #sectionRight{
-  position: relative;
-  margin-top: 73px;
+  /* position: relative; */
+  /* position: static; */
+  position: absolute;
+  margin-top: 68px;
   width: 400px;
   margin-left: -2px;
+
+  flex-shrink: 0;
+
+
 }
 #sectionRight:hover .sectionTitle{
   color: #0000CD;
 }
 .sectionTitle{
-  font-weight: 600;    /*font nunito sans*/
-  font-size: 1.5rem;
+  font-weight: 600;
   width: 100%;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  margin-top: 0;
   border-bottom: 2px solid #000000;
-  margin-bottom: 0;
-
-
+  padding: 0 0 0 20px;
+  margin: 0;
 }
-
+.sectionTitle h2{
+  margin: 0;
+  padding: 7px 0 7px 0;
+}
 
 .collapsible{
   cursor: pointer;
   outline: none;
-  font-weight: normal;
-  font-size: 1.5rem;
-
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+  text-align: left;
   width: 100%;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 0;
+  padding: 12px 0 12px 20px;
+  margin: 0;
   border: none;
   border-top: 2px solid #000000;
   display: flex;
   align-items: flex-end;
-  margin-bottom: 0;
   background-color: #ffffff;
 }
 .active, .collapsible:hover{
@@ -217,7 +239,8 @@ a:hover{
   padding: 0 18px;
   background-color: #ffffff;
   text-align: left;
-  border-top: 2px solid #000000;
+  /* border-top: 2px solid #000000; */
+  border: none;
 
 
 }
@@ -232,25 +255,23 @@ a:hover{
 }
 
 .textBox{
-  margin-left: 10px;
-  margin-top: 10px;
-  /* margin-bottom: 10px; */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.textBox:hover .sectionTitle{
+  color: #0000CD;
+}
+
+#frontText{
   width: 90%;
-  background: none;
-  border: none;
   font-size: 1.2rem;
   font-style: normal;
   line-height: 2rem;
-  padding: 10px;
-
-
-
-}
-#frontText{
   margin: 10px auto;
-}
-#frontText:hover{
-  /* color: #0000CD; */
+  background: none;
+  border: none;
+  padding: 10px;
 }
 
 #link{
