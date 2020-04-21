@@ -4,8 +4,9 @@ Joowon's website
 To do list
 -----------
 
-* Fix the column overlapping on main page on different browsers - working correctly on Firefox & Safari, but not on Chrome & Opera.
-* Setup responsive on Mobile(display) environment
+* Fix the column height sizing problem on bigger screen
+* Setup responsive on Mobile(display) environment for essay and blog
+* add essay contents
 
 ---------------
 
@@ -19,3 +20,5 @@ To do list
 
 * 21.04 (total: )
   - 10:20-10:55
+  - 12:55-13:40
+  - 14:50-15:58
