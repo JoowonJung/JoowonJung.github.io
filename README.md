@@ -4,9 +4,12 @@ Joowon's website
 To do list
 -----------
 
-* Fix the column height sizing problem on bigger screen
-* Setup responsive on Mobile(display) environment for essay and blog
-* add essay contents
+* fix the column height sizing problem on bigger screen
+* setup responsive on Mobile) environment for essay and blog
+* about
+* intro text & photos
+* bg img & thumnail img
+* essay contents need to be updated (pic/video/text/ref format)
 
 ---------------
 
@@ -26,5 +29,7 @@ To do list
 * 22.04 (total: 40')
   - 11:30-12:10
 
-* 23.04 (total: )
+* 23.04 (total: 3h22')
   - 9:20-10:25
+  - 14:12-15:05
+  - 17:32-18:5

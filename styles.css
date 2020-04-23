@@ -406,6 +406,11 @@ a:hover{
 .workTitle > h4 {
   margin: 0;
 }
+.subTitle {
+  font-weight: normal;
+  font-size: 1.2rem;
+  text-align: right;
+}
 
 .container{
   align-items: center;
@@ -448,12 +453,13 @@ a:hover{
   text-align: justify;
   font-size: 1.2rem;
   line-height: 2rem;
+  width: 70%;
 }
 .essayContainer p{
   margin: 0 auto;
   padding-top: 10px;
   padding-bottom: 20px;
-  width: 70%;
+  /* width: 70%; */
 }
 
 .essayReference{
@@ -465,6 +471,10 @@ a:hover{
 }
 .essayReference a{
   color: grey;
+}
+.essayReference > p{
+  margin-top: 0;
+  margin-bottom: 7px;
 }
 
 .quoteContainer{
