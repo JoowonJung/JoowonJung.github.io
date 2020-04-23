@@ -392,15 +392,19 @@ a:hover{
 }
 
 
-.workDescription{
+.workTitle{
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 600;
-  width: 60%;
+  width: 70%;
   align-items: center;
-  font-size: 2rem;
-  /* text-align: left; */
+  font-size: 1.5rem;
   padding-top: 0;
+  padding-bottom: 0;
+  text-align: left;
+}
+.workTitle > h4 {
+  margin: 0;
 }
 
 .container{
@@ -462,6 +466,20 @@ a:hover{
 .essayReference a{
   color: grey;
 }
+
+.quoteContainer{
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  width: 70%;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: grey;
+}
+.quoteReference{
+  text-align: right;
+}
+
 .textCaption{
   font-size: 1rem;
   color: grey;
