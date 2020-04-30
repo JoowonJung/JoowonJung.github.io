@@ -26,11 +26,11 @@ body{
   /* background-image: url("thumbnail/6.png");
   background-size: cover;
   background-position: center; */
-  background-image: url("img/3.png");
+  background-image: url("bg.jpg");
   background-repeat: repeat;
-  background-size: 800px;
+  background-size: 600px;
   /* background-size:  */
-  background-position: center;
+  /* background-position: center; */
 }
 .essayBody{
   background: none;
@@ -447,6 +447,13 @@ a:hover{
   width: 100%;
   font-style: italic;
 }
+.imgCol{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .essayContainer{
   margin-top: 20px;
@@ -620,6 +627,9 @@ a:hover{
   main{
     margin-left: auto;
     margin-right: auto;
+  }
+  .mainBody{
+    background-size: 100%;
   }
   .home{
     font-size: 25px;
