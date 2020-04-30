@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Prompt', sans-serif;
+  /* font-family: 'Prompt', sans-serif; */
   font-family: 'Nunito Sans', sans-serif;
 }
 *{
@@ -12,7 +12,6 @@ html{
   position: relative;
 }
 body{
-  /* font-family: 'Prompt', sans-serif; */
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
   padding: 0;
@@ -23,13 +22,9 @@ body{
   min-height: 100vh;
 }
 .mainBody{
-  /* background-image: url("thumbnail/6.png");
-  background-size: cover;
-  background-position: center; */
   background-image: url("bg.jpg");
   background-repeat: repeat;
   background-size: 600px;
-  /* background-size:  */
   /* background-position: center; */
 }
 .essayBody{
@@ -51,6 +46,8 @@ header{
   -moz-text-align-last: right; /* For Firefox prior 58.0 */
   text-align-last: right;
   writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
   text-orientation: mixed;
 
   /* border: 1px solid #000000; */
@@ -79,14 +76,21 @@ footer{
   text-orientation: mixed;
   position: fixed;
   bottom: 30px;
+  /* bottom: 25px; */
   height:100px;
   /* width:100%; */
   width: auto;
-  right: 5px;
+  /* right: 5px; */
+  right: 15px;
   /* top: 30px; */
   margin: 0 auto;
   padding-right: 15px;
 
+}
+.backButton{
+}
+.backButton img{
+  margin-bottom: 20px;
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -182,11 +186,13 @@ a:hover{
   left: 10vw;
   /* left: 20%; */
   width: 400px;
-  width: 25vw;
+  /* width: 25vw; */
+  width: 27vw;
 
   /* flex-shrink: 0; */
   /* flex-grow: 1; */
   /* overflow-x: auto; */
+  margin-bottom: 77px;
 
 }
 .sectionTitle2:hover a{
@@ -196,9 +202,11 @@ a:hover{
   position: relative;
   /* position: static; */
   /* position: absolute; */
+  margin-bottom: 20px;
   margin-top: 78px;
   width: 400px;
-  width: 25vw;
+  /* width: 25vw; */
+  width: 27vw;
   margin-left: -2px;
   /* flex-shrink: 0;
   flex-grow: 1; */
@@ -256,6 +264,7 @@ a:hover{
 
 }
 .refList{
+  /* color: grey; */
   font-size: 1.1rem;
   font-style: italic;
   line-height: 2rem;
@@ -315,7 +324,7 @@ a:hover{
   align-content: flex-start;
   flex-basis: auto;
   flex-grow: 1;
-  width: 80%;
+  width: 95%;
   /* height: 100%; */
 
   justify-content: flex-start;
@@ -422,19 +431,32 @@ a:hover{
   margin: 0;
   margin-bottom: 20px;
 }
+.videoWrapper{
+  width: 70%;
+}
 .videoContainer{
   position: relative;
-  width: 70%;
-  /* height: 0; */
-  /* padding-bottom: 56.25%; */
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  margin: 0 auto;
+  /* padding: 10px; */
 }
-.video{
+.videoContainer iframe{
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+/* .video{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
+} */
 .imageContainer{
   margin-top: 0;
 }
@@ -473,15 +495,19 @@ a:hover{
   margin-top: 20px;
   text-align: justify;
   font-size: 1rem;
+  line-height: 1.6;
   color: grey;
   width: 70%;
+}
+.essayReference h4{
+  font-size: 1.15rem;
 }
 .essayReference a{
   color: grey;
 }
 .essayReference > p{
   margin-top: 0;
-  margin-bottom: 7px;
+  /* margin-bottom: 7px; */
 }
 
 .quoteContainer{
@@ -598,16 +624,20 @@ a:hover{
     flex-direction: column;
   }
   header{
+    width: 100%;
+    top: 20px;
+    left: 0;
+    right: 0;
     /* right: 2px; */
-    /* position: absolute; */
+    /* position: fixed; */
     position: static;
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 0;
-
-   text-align-last: center;
-   -moz-text-align-last: center;
-   writing-mode: horizontal-tb;
+    text-align: center;
+   /* text-align-last: center; */
+   /* -moz-text-align-last: center; */
+   writing-mode: unset;
 
   }
   footer{
@@ -699,9 +729,25 @@ a:hover{
     line-height: 1.2;
     width: 100%;
     margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
     min-height: 100vh;
     padding: 10px;
     overflow: hidden;
+  }
+  .workTitle{
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .subTitle{
+    /* text-align: center; */
+    font-size: 1rem;
+  }
+  .essayContainer{
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
   }
   .popup {
     padding: 5px;
@@ -710,31 +756,61 @@ a:hover{
     width: 80%;
   }
   .imgDescription{
-    width: 80%;
-    font-size: 1rem;
+    width: 100%;
+    font-size: 0.8rem;
   }
   .container{
     align-items: center;
     width: 100%;
   }
-  .videoContainer{
-    width: 80vw;
-  }
-  .videoContainer iframe{
+  .videoWrapper{
     width: 100%;
   }
+  /* .videoContainer{
+    width: 100%;
+  } */
+  /* .videoContainer iframe{
+    width: 100%;
+  } */
   .imageContainer img{
-    width: 80vw;
+    /* width: 90vw; */
+    width: 100%;
     height: auto;
   }
+  .quoteContainer{
+    width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+  .essayReference{
+    font-size: 0.8rem;
+    line-height: 1.4;
+    width: 100%;
+  }
+  .essayReference h4{
+    font-size: 0.9rem;
+  }
+  .backButton{
+    position: absolute;
+  }
   .backButton img{
+    text-align: center;
     width: 30px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 0;
+    /* margin-right: 20px; */
+    margin-top: -20px;
+    margin-bottom: 20px;
+    padding-top: 0;
     /* bottom: 0; */
   }
+  .backButton img #aboutButton{
+    /* position: fixed;
+    bottom: 20px;
+    text-align: center;
+    margin: 0 auto; */
+    margin-top: 20px;
+  }
   .cv{
+    /* position: fixed; */
     top: 45%;
     width: 80%;
     font-size: 1rem;
