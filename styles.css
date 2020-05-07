@@ -450,6 +450,12 @@ a:hover{
   width: 100%;
   position: absolute;
 }
+.blogVideo{
+  /* width: 90%; */
+  align-items: center;
+ text-align: center;
+ margin: 0 auto;
+}
 /* .video{
   position: absolute;
   top: 0;
@@ -516,6 +522,7 @@ a:hover{
 }
 
 .quoteContainer{
+  text-align: justify;
   margin: 0 auto;
   padding-top: 10px;
   padding-bottom: 20px;
@@ -573,10 +580,12 @@ a:hover{
 }
 
 .blogIntro{
-  width: 80%;
-  text-align: center;
+  width: 70%;
+  /* text-align: center; */
+  text-align: justify;
   margin: 0 auto;
   font-size: 1.2rem;
+  line-height: 1.8;
 }
 
 .blogContentainer{
@@ -840,6 +849,14 @@ a:hover{
     width: 30vw;
     height: 30vw;
     font-size: 1rem;
+  }
+  .blogIntro{
+    width: 90%;
+    /* text-align: center; */
+    text-align: justify;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.4;
   }
 
 }
