@@ -4,8 +4,6 @@ Joowon's website
 To do list
 -----------
 
-* reference modal popup
-* reference upload
 * img/video upload
 * domain setup
 
