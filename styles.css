@@ -230,16 +230,31 @@ a:hover{
   margin: 0;
   padding: 7px 0 7px 0;
 }
-
-.collapsible{
+#myBtn{
+  border: none;
+  background-color: transparent;
   cursor: pointer;
-  outline: none;
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
   font-style: italic;
+  padding: 0;
+}
+#myBtn:hover{
+  color: #0000CD;
+}
+
+button #myBtn:focus{
+    color: #0000CD;
+}
+button #myBtn:active{
+  color: #0000CD;
+}
+
+.refBtn{
   text-align: left;
   width: 100%;
-  padding: 12px 0 12px 20px;
+  padding: 10px 0 10px 20px;
   margin: 0;
   border: none;
   border-top: 2px solid #000000;
@@ -247,9 +262,66 @@ a:hover{
   align-items: flex-end;
   background-color: #ffffff;
 }
-.active, .collapsible:hover{
+.modal{
+  display: none;
+  z-index: 999;
+  /* overflow: auto; */
+  animation: fadein .5s;
+  position: absolute;
+  /* top: 30%; */
+  top: 24%;
+  left: 50px;
+  /* width: 600px; */
+  width: 35vw;
+  /* height: 600px; */
+  /* height: 60vh; */
+  height: 67vh;
+  margin-bottom: 30px;
+}
+.modal-content{
+  overflow: hidden;
+  /* position: fixed; */
+  overflow-y: auto;
+  /* overflow-x: auto; */
+  overflow-x: scroll;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+  border: 2px solid black;
+  margin-bottom: 30px;
+  color: black;
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.4;
+  /* box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .3); */
+  box-shadow: 6px 8px 6px -6px rgba(0, 0, 0, .4);
+}
+.close{
+  cursor: pointer;
+  float: right;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  padding-top: 0;
+  padding-right: 10px;
+  color: #000000;
+}
+.close:hover{
   color: #0000CD;
 }
+.modal-body{
+  /* overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  color: black;
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.4; */
+  padding: 30px 15px 20px 10px;
+}
+
 .refContent{
   width: 100%;
   max-height: 0;
@@ -258,10 +330,7 @@ a:hover{
   padding: 0 18px;
   background-color: #ffffff;
   text-align: left;
-  /* border-top: 2px solid #000000; */
   border: none;
-
-
 }
 .refList{
   /* color: grey; */
@@ -273,7 +342,6 @@ a:hover{
   padding-left: 10px;
   margin-bottom: 20px;
 }
-
 .textBox{
   margin: 0;
   padding: 0;
@@ -450,7 +518,7 @@ a:hover{
   width: 100%;
   position: absolute;
 }
-.blogVideo{
+.introVideo{
   /* width: 90%; */
   align-items: center;
  text-align: center;
@@ -562,7 +630,7 @@ a:hover{
   font-style: italic;
 }
 
-.blogMain{
+.introMain{
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -574,12 +642,12 @@ a:hover{
   text-align: center;
   /* background-color: #ffffff; */
 }
-#blogTitle{
+#introTitle{
   margin: 20px;
   padding-top: 20px;
 }
 
-.blogIntro{
+.introIntro{
   width: 70%;
   /* text-align: center; */
   text-align: justify;
@@ -588,7 +656,7 @@ a:hover{
   line-height: 1.8;
 }
 
-.blogContentainer{
+.introContentainer{
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -605,7 +673,7 @@ a:hover{
   margin-bottom: 20px;
   text-align: center;
 }
-.blogContent{
+.introContent{
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -626,7 +694,7 @@ a:hover{
   padding: 10px;
   cursor: pointer;
 }
-.blogContent:hover{
+.introContent:hover{
   background-color: #0000CD;
   color: #ffffff;
 }
@@ -845,12 +913,12 @@ a:hover{
     font-size: 1rem;
     line-height: 1.6;
   }
-  .blogContent{
+  .introContent{
     width: 30vw;
     height: 30vw;
     font-size: 1rem;
   }
-  .blogIntro{
+  .introIntro{
     width: 90%;
     /* text-align: center; */
     text-align: justify;
@@ -858,5 +926,23 @@ a:hover{
     font-size: 1rem;
     line-height: 1.4;
   }
-
+  .modal{
+    top: 35%;
+    width: 80vw;
+    height: 80vh;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .modal-content{
+    font-size: 0.9rem;
+    /* overflow-x: scroll; */
+  }
+  .modal-body{
+    padding: 25px 10px 15px 5px;
+  }
+ .close{
+   font-size: 2rem;
+   padding-right: 5px;
+ }
 }
