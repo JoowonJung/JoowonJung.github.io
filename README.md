@@ -4,8 +4,7 @@ Joowon's website
 To do list
 -----------
 
-* img/video upload
-* domain setup
+* tutorial doc
 
 ---------------
 
@@ -26,5 +25,7 @@ To do list
   - 9:23-10:09
   - 10:51-12:15
 
-* 14.05 (total:)
-  - 9:10-
+* 14.05 (total: 2h 2')
+  - 9:10-9:30
+  - 10:13-10:35
+  - 11:08-12:28
